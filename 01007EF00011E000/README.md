@@ -4,6 +4,8 @@ The mod fixes the black line artifact when anisotropic filtering (AF) is enabled
 
 This mod also sets the sampler for the terrain textures to trilinear instead of bilinear. This essentially activates anisotropic filtering in the first place, because of the same reason (AF is only increased on trilinear samplers). I don't know why the game uses bilinear instead of trilinear sampling. Maybe because it looks sharper (less blending) when AF is not possible, as on the Switch hardware for performance reasons, or it is a artistic choice.
 
+### To see an effect you need to set anisotropic filtering to 2x, 4x, 8x or 16x in Yuzu's advanced graphics settings
+
 <table width="100%">
   <tr>
   <th width="50%">Original - Black line artifact and no AF</td>
