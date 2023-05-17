@@ -1,0 +1,18 @@
+@nsobid-8E9978D50BDD20B4C8395A106C27FFDE
+
+# The Legend of Zelda: Breath of the Wild v1.6.0 - Anisotropic Filtering Fix
+
+@flag print_values
+@flag offset_shift 0x100
+
+// Set mipmap filter to nearest on shadow map sampler (fixes black line artifact)
+@enabled
+0128AC58 2AE0A0F2     // movk x10,#0x701, LSL #16
+@stop
+
+// Force bilinear terrain samplers to be trilinear
+@enabled
+01D3EBB4 AA008052     // mov w10,#0x5
+@stop
+
+@Wollnashorn
