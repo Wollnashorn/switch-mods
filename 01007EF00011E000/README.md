@@ -7,7 +7,7 @@ This mod also sets the sampler for the terrain textures to trilinear instead of 
 <table width="100%">
   <tr>
   <th width="50%">Original - Black line artifact and no AF</td>
-  <th width="50%">Fixed</td>
+  <th width="50%">Fixed - Ground textures are much sharper and no shadow artifacts</td>
   </tr>
   <tr>
   <tr>
