@@ -2,7 +2,7 @@
 
 The mod fixes possible black line artifacts when anisotropic filtering (AF) is enabled in Yuzu, by setting the mipmap filter of the sampler that samples the shadow map depth texture from "linear" (trilinear) to "nearest" (bilinear). Yuzu only increases the maximum anisotropic filtering for trilinear samplers, so this effectively disables AF for the shadow map sampler, as the value of the maximum anisotropic filtering for this sampler is at 1x (no AF).
 
-This mod also sets the sampler for the terrain textures to trilinear instead of bilinear. This essentially activates anisotropic filtering in the first place for the same reason (AF is only increased on trilinear samplers). I don't know why the game uses bilinear instead of trilinear sampling. Maybe because it looks sharper (less blending) when AF is not possible for performance reasons, as it is on the Switch hardware, or maybe it is an artistic choice.
+This mod also sets the terrain texture sampler to trilinear instead of bilinear. This essentially activates anisotropic filtering in the first place for the same reason (AF is only increased on trilinear samplers). I don't know why the game uses bilinear instead of trilinear sampling. Maybe because it looks sharper (less blending) when AF is not possible for performance reasons, as it is on the Switch hardware, or maybe it is an artistic choice.
 
 ### To see an effect you need to set anisotropic filtering to 2x, 4x, 8x or 16x in Yuzu's advanced graphics settings
 
