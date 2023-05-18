@@ -1,3 +1,5 @@
+# Zelda: Tears of the Kingdom
+
 # Anisotropic Filtering Fix
 
 The mod fixes possible black line artifacts when anisotropic filtering (AF) is enabled in Yuzu, by setting the mipmap filter of the sampler that samples the shadow map depth texture from "linear" (trilinear) to "nearest" (bilinear). Yuzu only increases the maximum anisotropic filtering for trilinear samplers, so this effectively disables AF for the shadow map sampler, as the value of the maximum anisotropic filtering for this sampler is at 1x (no AF).
