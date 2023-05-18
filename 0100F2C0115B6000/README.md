@@ -1,4 +1,4 @@
-# Zelda: Tears of the Kingdom
+# The Legend of Zelda: Tears of the Kingdom
 
 # Anisotropic Filtering Fix
 
