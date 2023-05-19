@@ -1,7 +1,5 @@
-# The Legend of Zelda: Breath of the Wild 1.1.0
+# The Legend of Zelda: Breath of the Wild
 # Anisotropic Filtering Fix
-
-<b>You can find updated versions here: https://github.com/HolographicWings/TOTK-Mods-collection</b>
 
 The mod fixes the black line artifact when anisotropic filtering (AF) is enabled in Yuzu, by setting the mipmap filter of the sampler that samples the shadow map depth texture from "linear" (trilinear) to "nearest" (bilinear). Yuzu only increases the maximum anisotropic filtering for trilinear samplers, so this effectively disables AF for the shadow map sampler, as the value of the maximum anisotropic filtering for this sampler is at 1x (no AF).
 
