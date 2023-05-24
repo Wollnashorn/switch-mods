@@ -1,4 +1,7 @@
 # The Legend of Zelda: Breath of the Wild 1.6.0
+# 1080p
+Makes Breath of the Wild run with 1080p instead of 900p in docked mode, resulting in a clearer picture on common resolutions.
+</br></br>
 # Anisotropic Filtering Fix
 
 The mod fixes the black line artifact when anisotropic filtering (AF) is enabled in Yuzu, by setting the mipmap filter of the sampler that samples the shadow map depth texture from "linear" (trilinear) to "nearest" (bilinear). Yuzu only increases the maximum anisotropic filtering for trilinear samplers, so this effectively disables AF for the shadow map sampler, as the value of the maximum anisotropic filtering for this sampler is at 1x (no AF).

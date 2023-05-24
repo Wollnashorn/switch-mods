@@ -1,0 +1,13 @@
+@nsobid-8E9978D50BDD20B4C8395A106C27FFDE
+
+# The Legend of Zelda: Breath of the Wild v1.6.0 - 1080p
+
+@flag print_values
+@flag offset_shift 0x100
+
+// Set framebuffer resolution to 1080p 
+@enabled
+01821674 089EE8F2
+@stop
+
+@Wollnashorn
