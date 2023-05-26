@@ -1,0 +1,13 @@
+@nsobid-8E9978D50BDD20B4C8395A106C27FFDE
+
+# The Legend of Zelda: Breath of the Wild v1.6.0 - Disable FXAA
+
+@flag print_values
+@flag offset_shift 0x100
+
+// Disable FXAA
+@enabled
+01420FD8 FF7300B9   // str wzr,[sp, #local_160]
+@stop
+
+@Wollnashorn

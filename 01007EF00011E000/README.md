@@ -2,6 +2,11 @@
 # 1080p
 Makes Breath of the Wild run with 1080p instead of 900p in docked mode, resulting in a clearer picture on common resolutions.
 </br></br>
+
+# Disable FXAA
+Disables the FXAA pass the game applies to the framebuffer in docked mode, so that the image can be cleanly downscaled or better post-process antialiasing solutions can be used such as Yuzu's SMAA implementation. Recommended with the 1080p mod.
+</br></br>
+
 # Anisotropic Filtering Fix
 
 The mod fixes the black line artifact when anisotropic filtering (AF) is enabled in Yuzu, by setting the mipmap filter of the sampler that samples the shadow map depth texture from "linear" (trilinear) to "nearest" (bilinear). Yuzu only increases the maximum anisotropic filtering for trilinear samplers, so this effectively disables AF for the shadow map sampler, as the value of the maximum anisotropic filtering for this sampler is at 1x (no AF).
@@ -32,19 +37,6 @@ This mod also sets the terrain texture sampler to trilinear instead of bilinear.
   <tr>
   <td><img src="https://gist.github.com/Wollnashorn/45e31c53f753788e194ddfbb3116de3c/raw/7118597e1a59d0e980d95c29777b35e25fb2d05b/botw-shadows-broken.png"></td>
   <td><img src="https://gist.github.com/Wollnashorn/45e31c53f753788e194ddfbb3116de3c/raw/7118597e1a59d0e980d95c29777b35e25fb2d05b/botw-shadows-fixed.png"></td>
-  </tr>
-</table>
-
-
-<table width="100%">
-  <tr>
-  <th width="50%">Diffuse - AF not working</td>
-  <th width="50%">Diffuse - fixed</td>
-  </tr>
-  <tr>
-  <tr>
-  <td><img src="https://gist.github.com/Wollnashorn/45e31c53f753788e194ddfbb3116de3c/raw/bafb2aef039ef8d044dc66984d5f041681300d02/botw-diffuse-bilinear.png"></td>
-  <td><img src="https://gist.github.com/Wollnashorn/45e31c53f753788e194ddfbb3116de3c/raw/bafb2aef039ef8d044dc66984d5f041681300d02/botw-diffuse-trilinear.png"></td>
   </tr>
 </table>
 
