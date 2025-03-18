@@ -19,7 +19,7 @@
 // 0075D2B0 C8008052    // mov w8,#6
 // @stop
 
-// Force anisotropic filtering value of terrain samplers to 4x
+// // Force anisotropic filtering value of terrain samplers to 4x
 // @enabled
 // 0075D2B0 88008052    // mov w8,#4
 // @stop
