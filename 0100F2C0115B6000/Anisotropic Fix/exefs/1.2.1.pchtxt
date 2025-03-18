@@ -1,0 +1,45 @@
+@nsobid-9B4E43650501A4D4489B4BBFDB740F26AF3CF850
+
+# The Legend of Zelda: Tears of the Kingdom v1.2.1 - Anisotropic Filtering Fix
+
+@flag print_values
+@flag offset_shift 0x100
+
+///////////////////////// Override anisotropic filtering sample count /////////////////////////
+// Override anisotropic samples for terrain samplers to either 2x, 4x, 8x or 16x.
+// Uncomment one of the four options:
+
+// Force anisotropic filtering value of terrain samplers to 16x
+@enabled
+0075D2B0 08018052    // mov w8,#8
+@stop
+
+// // Force anisotropic filtering value of terrain samplers to 8x
+// @enabled
+// 0075D2B0 C8008052    // mov w8,#6
+// @stop
+
+// Force anisotropic filtering value of terrain samplers to 4x
+// @enabled
+// 0075D2B0 88008052    // mov w8,#4
+// @stop
+
+// // Force anisotropic filtering value of terrain samplers to 2x
+// @enabled
+// 0075D2B0 48008052    // mov w8,#2
+// @stop
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Force bilinear terrain samplers to be trilinear
+@enabled
+0075D1E0 4A008052    // mov w10,#0x2
+@stop
+
+// Set mipmap filter to nearest on shadow map sampler, fixes black line artifacts on emulators
+@enabled
+00C28368 28E0A0F2    // movk x8,#0x701, LSL #16
+@stop
+
+@Wollnashorn
